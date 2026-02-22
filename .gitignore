@@ -1,0 +1,19 @@
+# System
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+
+# Temp
+*.log
+*.tmp
+
+# Build
+dist/
+.cache/
+
+# Node
+node_modules/
+.DS_Store
+assets/.DS_Store
