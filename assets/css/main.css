@@ -114,6 +114,12 @@ header {
   transition: 0.3s;
 }
 
+.nav-links a.active {
+  font-weight: 600;
+  border-bottom: 2px solid white; /* or your brand color */
+  opacity: 1;
+}
+
 .nav-links a:hover,
 .nav-links a.active {
   opacity: 1;

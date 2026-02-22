@@ -4,6 +4,28 @@ async function loadComponent(id, file) {
   document.getElementById(id).innerHTML = html;
 }
 
+function initActiveNav() {
+  const links = document.querySelectorAll(".nav-links a");
+  const currentPath = window.location.pathname.replace(/\/$/, "");
+
+  links.forEach(link => {
+    const linkPath = new URL(link.href).pathname.replace(/\/$/, "");
+
+    // 1. Exact match (highlight current page)
+    if (currentPath === linkPath) {
+      link.classList.add("active");
+    }
+
+    // 2. Parent section highlight (Works / Expertise main link)
+    if (
+      (currentPath.startsWith("/works/") && linkPath === "/works") ||
+      (currentPath.startsWith("/expertise/") && linkPath === "/expertise")
+    ) {
+      link.classList.add("active");
+    }
+  });
+}
+
 /* Load all components */
 async function loadAll() {
   await loadComponent("header", "/components/header.html");
@@ -11,10 +33,10 @@ async function loadAll() {
   await loadComponent("footer", "/components/footer.html");
 
   initSidebar(); // ✅ Run AFTER load
+  initActiveNav();
 }
 
 loadAll();
-
 
 /* ================= INIT SIDEBAR ================= */
 
