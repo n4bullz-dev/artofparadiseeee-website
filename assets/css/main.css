@@ -93,6 +93,14 @@ header {
   height: 50px;
 }
 
+.logo a {
+  display: inline-block;
+}
+
+.logo img {
+  cursor: pointer;
+}
+
 /* ======================================================================================================================
 ! DESKTOP NAV
 ======================================================================================================================== */
@@ -1346,6 +1354,20 @@ footer {
   max-width: 260px;   /* smaller logo */
   height: auto;
   /* opacity: 0.9; */
+}
+
+.contact-center a {
+  display: inline-block;
+}
+
+.contact-logo {
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.contact-logo:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
 }
 
 /* Right */
