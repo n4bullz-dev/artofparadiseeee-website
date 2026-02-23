@@ -1483,3 +1483,149 @@ footer {
   }
 
 }
+
+/* ======================================================================================================================
+! PROJECT CARD
+======================================================================================================================== */
+
+.projects-section {
+  padding: 60px 20px;
+}
+
+.projects-container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* Grid */
+.projects-grid {
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(364px, 1fr)
+  );
+
+  gap: 15px;
+
+  justify-content: start;
+}
+
+@media (max-width: 600px){
+  .projects-grid {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+}
+
+/* @media (max-width: 1050px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+} */
+
+/* ===========================
+   Card
+=========================== */
+
+.project-card {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-card:visited,
+.project-card:hover,
+.project-card:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Image Wrapper */
+.project-image {
+  position: relative;
+  height: 280px;
+  border-radius: 6px;
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.4);
+
+  display: flex;
+  align-items: flex-end;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover Effect */
+.project-card:hover .project-image {
+  transform: translateY(-5px);
+  /* box-shadow: 0 12px 28px rgba(0,0,0,0.25); */
+}
+
+/* ===========================
+   Content
+=========================== */
+
+.project-content {
+  width: 100%;
+  background: #002a66;
+  padding: 14px 18px;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 6px 10px;
+}
+
+/* Title */
+.project-title {
+  grid-column: 1 / 2;
+
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+/* Roles */
+.project-role {
+  grid-column: 1 / 2;
+
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #fff;
+  opacity: 0.9;
+
+  line-height: 1.4;
+}
+
+/* Views */
+.project-views {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* Play Icon */
+.play-icon {
+  font-size: 1.1rem;
+}

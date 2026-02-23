@@ -2,12 +2,12 @@
 ! HERO
 ============================================================== */
 
-.works-hero {
+.expertise-hero {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 52vh;
+    height: 40vh;
     
     background-size: cover;
     background-position: center;
@@ -18,119 +18,71 @@
 ! COVER BG (FOR EACH CATEGORY)
 ============================================================== */
 
-.hero-award{
+.hero-director{
     background:
         linear-gradient(
             rgba(0,0,0,0.6),
             rgba(0,0,0,0.6)
-        ), url("/assets/images/works-cover/award.jpg");
+        ), url("/assets/images/expertise-cover/director.jpg");
     
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 24%; /* Change this */
 }
 
-.hero-teaser{
+.hero-cinematographer{
     background:
         linear-gradient(
             rgba(0,0,0,0.6),
             rgba(0,0,0,0.6)
-        ), url("/assets/images/works-cover/teaser.jpg");
+        ), url("/assets/images/expertise-cover/cinematographer.jpg");
     
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center 54%; /* Change this */
+    background-position: center 36%; /* Change this */
 }
 
-.hero-shortfilm{
+.hero-editor{
     background:
         linear-gradient(
             rgba(0,0,0,0.6),
             rgba(0,0,0,0.6)
-        ), url("/assets/images/works-cover/shortfilm.jpg");
+        ), url("/assets/images/expertise-cover/editor.jpg");
     
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center 40%; /* Change this */
+    background-position: center 91%; /* Change this */
 }
 
-.hero-musicvideo{
+.hero-colorist{
     background:
         linear-gradient(
             rgba(0,0,0,0.6),
             rgba(0,0,0,0.6)
-        ), url("/assets/images/works-cover/musicvideo.jpg");
+        ), url("/assets/images/expertise-cover/colorist.jpg");
     
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center 69%; /* Change this */
+    background-position: center 15%; /* Change this */
 }
 
-.hero-documentary{
+.hero-vfx{
     background:
         linear-gradient(
             rgba(0,0,0,0.6),
             rgba(0,0,0,0.6)
-        ), url("/assets/images/works-cover/documentary.jpg");
+        ), url("/assets/images/expertise-cover/vfx.jpg");
     
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center 34%; /* Change this */
-}
-
-.hero-commercial{
-    background:
-        linear-gradient(
-            rgba(0,0,0,0.6),
-            rgba(0,0,0,0.6)
-        ), url("/assets/images/works-cover/commercial.jpg");
-    
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center 60%; /* Change this */
-}
-
-.hero-performance{
-    background:
-        linear-gradient(
-            rgba(0,0,0,0.6),
-            rgba(0,0,0,0.6)
-        ), url("/assets/images/works-cover/performance.jpg");
-    
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center 45%; /* Change this */
-}
-
-.hero-led{
-    background:
-        linear-gradient(
-            rgba(0,0,0,0.6),
-            rgba(0,0,0,0.6)
-        ), url("/assets/images/works-cover/led.jpg");
-    
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center 45%; /* Change this */
-}
-
-.hero-photo{
-    background:
-        linear-gradient(
-            rgba(0,0,0,0.6),
-            rgba(0,0,0,0.6)
-        ), url("/assets/images/works-cover/photo.jpg");
-    
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center 40%; /* Change this */
+    background-position: center 24%; /* Change this */
 }
 
 /* ==============================================================
 ! HERO TEXT
 ============================================================== */
 
-.works-text h1 {
+.expertise-text h1 {
     text-align: center;
     color: #fff;
     /* padding: 0px 0px 0px; */
@@ -139,7 +91,7 @@
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
 }
 
-.works-text p {
+.expertise-text p {
     margin: 0 auto;
     max-width: 640px;
     text-align: center;
@@ -151,27 +103,23 @@
 
 /* ========= TABLET ========= */
 @media (max-width: 1024px){
-    .works-text h1 {
+    .expertise-text h1 {
         font-size: clamp(3.5rem, 7vw, 4.5rem);
     }
 
-    .works-hero {
-        height: 38vh;
+    .expertise-hero {
+        height: 30vh;
     }
 }
 
 /* ========= PHONE ========= */
 @media (max-width: 600px){
-    .works-text h1 {
+    .expertise-text h1 {
         font-size: clamp(2.2rem, 10vw, 3.5rem);
     }
 
-    .works-hero {
-        height: 38vh;
-    }
-
-    .works-text p {
-        font-size: clamp(0.8rem, 3vw, 1rem);
+    .expertise-hero {
+        height: 20vh;
     }
 }
 
@@ -180,7 +128,7 @@
 ============================================================== */
 
 /* Button Container */
-.works-buttons {
+.expertise-buttons {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   width: 100%;
@@ -189,7 +137,7 @@
 }
 
 /* Buttons */
-.work-btn {
+.expertise-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -213,26 +161,26 @@
 }
 
 /* Remove double borders */
-.work-btn:not(:nth-child(1)) {
+.expertise-btn:not(:nth-child(1)) {
   border-left: none;
   /* border-top: none; */
 }
 
 /* Active Button */
-.work-btn.active {
+.expertise-btn.active {
   background: #002a66;
   color: #fff;
 }
 
 /* Hover (Optional) */
-.work-btn:hover {
+.expertise-btn:hover {
   background: #002a66;
   color: #fff;
 }
 
 /* ========= TABLET ========= */
 @media (max-width: 1024px){
-    .work-btn{
+    .expertise-btn{
         /* width: 120%; */
         height: 55px;
     }
@@ -242,7 +190,7 @@
 ! CONTAINER (FOR WORKS ONLY)
 ============================================================== */
 
-.works-container {
+.expertise-container {
     width: 100%;
     max-width: 1430px;
     margin: 0 auto;
@@ -252,6 +200,6 @@
 ! WORKS LIST
 ============================================================== */
 
-.works-list {
+.expertise-list {
     padding: 40px 10px 40px;
 }
