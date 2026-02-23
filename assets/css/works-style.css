@@ -1,0 +1,244 @@
+/* ==============================================================
+! HERO
+============================================================== */
+
+.works-hero {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ==============================================================
+! COVER BG (FOR EACH CATEGORY)
+============================================================== */
+
+.hero-award{
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.6),
+            rgba(0,0,0,0.6)
+        ), url("/assets/images/works-cover/award.jpg");
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 24%; /* Change this */
+}
+
+.hero-teaser{
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.6),
+            rgba(0,0,0,0.6)
+        ), url("/assets/images/works-cover/teaser.jpg");
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 50%; /* Change this */
+}
+
+.hero-shortfilm{
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.6),
+            rgba(0,0,0,0.6)
+        ), url("/assets/images/works-cover/shortfilm.jpg");
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 40%; /* Change this */
+}
+
+.hero-musicvideo{
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.6),
+            rgba(0,0,0,0.6)
+        ), url("/assets/images/works-cover/musicvideo.jpg");
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 69%; /* Change this */
+}
+
+.hero-documentary{
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.6),
+            rgba(0,0,0,0.6)
+        ), url("/assets/images/works-cover/documentary.jpg");
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 34%; /* Change this */
+}
+
+.hero-commercial{
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.6),
+            rgba(0,0,0,0.6)
+        ), url("/assets/images/works-cover/commercial.jpg");
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 60%; /* Change this */
+}
+
+.hero-performance{
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.6),
+            rgba(0,0,0,0.6)
+        ), url("/assets/images/works-cover/performance.jpg");
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 45%; /* Change this */
+}
+
+.hero-led{
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.6),
+            rgba(0,0,0,0.6)
+        ), url("/assets/images/works-cover/led.jpg");
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 45%; /* Change this */
+}
+
+.hero-photo{
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.6),
+            rgba(0,0,0,0.6)
+        ), url("/assets/images/works-cover/photo.jpg");
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 40%; /* Change this */
+}
+
+/* ==============================================================
+! HERO TEXT
+============================================================== */
+
+.works-text h1 {
+    text-align: center;
+    color: #fff;
+    /* padding: 0px 0px 0px; */
+    font-size: 4.5rem;
+    padding: 40px 20px 15px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.works-text p {
+    margin: 0 auto;
+    max-width: 640px;
+    text-align: center;
+    color: #fff;
+    line-height: 1.7;
+    padding: 0px 50px 20px;
+    font-size: 1rem;
+}
+
+/* ========= TABLET ========= */
+@media (max-width: 1024px){
+    .works-text h1 {
+        font-size: clamp(3.5rem, 7vw, 4.5rem);
+    }
+}
+
+/* ========= PHONE ========= */
+@media (max-width: 600px){
+    .works-text h1 {
+        font-size: clamp(2.2rem, 10vw, 3.5rem);
+    }
+}
+
+/* ==============================================================
+! BUTTONS
+============================================================== */
+
+/* Button Container */
+.works-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  width: 100%;
+  /* max-width: 1800px; */
+  margin: 0 auto;
+}
+
+/* Buttons */
+.work-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 46px;              /* Fixed height */
+  font-size: 1rem;         /* Fixed font size */
+  font-weight: 500;
+  padding: 0;               /* No padding */
+  margin: 0;                /* No gap */
+
+  color: #002a66;
+  background: #fff;
+  border: 2px solid #002a66;
+
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+
+  transition: all 0.2s ease;
+}
+
+/* Remove double borders */
+.work-btn:not(:nth-child(1)) {
+  border-left: none;
+  /* border-top: none; */
+}
+
+/* Active Button */
+.work-btn.active {
+  background: #002a66;
+  color: #fff;
+}
+
+/* Hover (Optional) */
+.work-btn:hover {
+  background: #002a66;
+  color: #fff;
+}
+
+/* ========= TABLET ========= */
+@media (max-width: 1024px){
+    .work-btn{
+        /* width: 120%; */
+        height: 55px;
+    }
+}
+
+/* ==============================================================
+! CONTAINER (FOR WORKS ONLY)
+============================================================== */
+
+.works-container {
+    width: 100%;
+    max-width: 1430px;
+    margin: 0 auto;
+}
+
+/* ==============================================================
+! WORKS LIST
+============================================================== */
+
+.works-list {
+    padding: 40px 10px 40px;
+}
