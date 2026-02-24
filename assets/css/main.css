@@ -1530,10 +1530,10 @@ footer {
   aspect-ratio: 16/10;
   text-decoration: none;
   color: inherit;
-  border-radius: 6px;
+  border-radius: 4px;
   overflow: hidden;
   transition: transform 0.25s ease;
-  box-shadow: 2px 4px 8px rgba(0,0,0,0.7);
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.5);
 }
 
 .project-card:visited,
@@ -1600,8 +1600,8 @@ footer {
   max-width: 100%;
 }
 
-/* Roles */
-.project-role {
+/* Category */
+.project-desp{
   grid-column: 1 / 2;
 
   font-size: 0.9rem;
