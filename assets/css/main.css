@@ -533,7 +533,7 @@ header {
 
     gap: 40px;
 
-    padding: 80px 48px 42px;
+    padding: 0px 48px 42px;
   }
 
   .intro-text .intro-role{
@@ -562,7 +562,7 @@ header {
 
     gap: 40px;
 
-    padding: 80px 18px 28px;
+    padding: 0px 18px 28px;
   }
 
   .intro-text {
@@ -601,7 +601,7 @@ header {
 
     gap: 36px;
 
-    padding: 60px 0px 20px;
+    padding: 20px 0px 20px;
   }
 
   .intro-text {
@@ -690,7 +690,7 @@ header {
 
   max-width: 600px;
   margin: 0 auto;
-  padding: 0px 20px 64px;
+  padding: 0px 20px 0px;
 }
 
 .icon-grid img {
@@ -1074,7 +1074,7 @@ header {
 
     gap: 40px;
 
-    padding: 20px 48px 42px;
+    padding: 60px 48px 42px;
   }
 
   .detail-1-text .detail-1-role{
@@ -1103,7 +1103,7 @@ header {
 
     gap: 20px;
 
-    padding: 10px 48px 60px;
+    padding: 60px 48px 60px;
   }
 
   .detail-1-text {
@@ -1137,7 +1137,7 @@ header {
 
     gap: 30px;
 
-    padding: 10px 0px 60px;
+    padding: 60px 0px 60px;
   }
 
   .detail-1-text {
@@ -1535,10 +1535,17 @@ footer {
 =========================== */
 
 .project-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
+
   width: 100%;
+  height: 360px;
   text-decoration: none;
   color: inherit;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.25s ease;
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.7);
 }
 
 .project-card:visited,
@@ -1551,27 +1558,31 @@ footer {
 /* Image Wrapper */
 .project-image {
   position: relative;
-  height: 280px;
-  border-radius: 6px;
-  overflow: hidden;
+  flex: 1;
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  box-shadow: 4px 4px 12px rgba(0,0,0,0.4);
+
 
   display: flex;
   align-items: flex-end;
 
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  /* transition: transform 0.25s ease; */
 }
 
 /* Hover Effect */
-.project-card:hover .project-image {
+.project-card:hover {
   transform: translateY(-5px);
   /* box-shadow: 0 12px 28px rgba(0,0,0,0.25); */
 }
+
+/* @media (max-width: 600px){
+  .project-image{
+    height: 160px;
+  }
+} */
 
 /* ===========================
    Content
@@ -1586,6 +1597,8 @@ footer {
   grid-template-columns: 1fr auto;
   grid-template-rows: auto auto;
   gap: 6px 10px;
+
+  
 }
 
 /* Title */
@@ -1597,6 +1610,12 @@ footer {
   color: #fff;
 
   text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  max-width: 100%;
 }
 
 /* Roles */
@@ -1609,6 +1628,10 @@ footer {
   opacity: 0.9;
 
   line-height: 1.4;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Views */
@@ -1628,4 +1651,39 @@ footer {
 /* Play Icon */
 .play-icon {
   font-size: 1.1rem;
+}
+
+/* ======================================================================================================================
+! FEATURED WORKS
+======================================================================================================================== */
+
+.featured-text{
+  padding: 0px 30px 30px;
+}
+
+.featured-text h1 {
+  color: #002a66;
+  font-size: 3rem;
+}
+
+.container-line {
+  width: 100%;
+  /* max-width: 1150px; */
+
+  margin: 0 auto;
+
+  border: none;
+  border-top: 2px solid #002a66;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 797px){
+  .featured-text h1{
+    text-align: center;
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .featured-text {
+    padding: 0px 0px 30px;
+  }
 }
