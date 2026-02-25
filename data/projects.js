@@ -646,7 +646,8 @@ const projects = [
 
     image: "/20-shots/20-shots-cover.jpg",
     url: "/20-shots",
-    views: "9.8K"
+    views: "9.8K",
+    videoURL: "/20-shots/1_FUNDMEDIA_20shots.mp4"
   }
 
 ];

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TEST - artofparadiseeee</title>
+  <meta name="description" content="TEST">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-180.png">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/player.css">
+  <link rel="stylesheet" href="/assets/css/project-style.css">
+  
+</head>
+<body>
+
+<!-- ================= ! HEADER ! SIDEBAR ================= -->
+  <div id="header"></div>
+  <div id="sidebar-container"></div>
+
+<!-- ================= ! VIDEO PLAYER ================= -->
+        
+    <section class="player-hero">
+
+        <div class="player-container">
+
+            <div class="video-wrapper">
+
+            <video id="video"></video>
+
+            <div class="controls">
+
+                <button id="playBtn">▶</button>
+
+                <input
+                type="range"
+                id="timeline"
+                min="0"
+                max="100"
+                value="0"
+                />
+
+                <span id="time">0:00 / 0:00</span>
+
+                <!-- Volume -->
+                <input
+                    type="range"
+                    id="volume"
+                    min="0"
+                    max="1"
+                    step="0.01"
+                    value="1"
+                />
+
+                <button id="fullscreenBtn">⛶</button>
+
+            </div>
+
+            </div>
+
+
+
+        </div>
+
+        <h1 id="title"></h1>
+
+    </section>
+        
+
+<!-- ================= ! FOOTER ================= -->
+  <div id="footer"></div>
+
+  <script src="/assets/js/main.js"></script>
+  <script src="/data/projects.js"></script>
+  <script src="/assets/js/render-projects.js"></script>
+  <script src="/assets/js/player.js"></script>
+</body>
+</html>

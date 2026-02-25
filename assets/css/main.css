@@ -341,7 +341,7 @@ header {
 .hero {
   flex: 1;
 
-  padding: 260px 80px;
+  padding: 160px 80px;
 
   display: flex;
   justify-content: center;
@@ -1503,7 +1503,7 @@ footer {
 
   grid-template-columns: repeat(
     auto-fill,
-    minmax(364px, 1fr)
+    minmax(300px, 1fr)
   );
 
   gap: 15px;
@@ -1527,7 +1527,7 @@ footer {
   flex-direction: column;
 
   width: 100%;
-  aspect-ratio: 16/10;
+  aspect-ratio: 16/14;
   text-decoration: none;
   color: inherit;
   border-radius: 4px;

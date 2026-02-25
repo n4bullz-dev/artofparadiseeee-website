@@ -87,7 +87,8 @@ function renderHomeProjects() {
     "cu-fmn-2024",
     "sanshiba",
     "silent-sea-empty-nets",
-    "the-most-bittersweet-feelings"
+    "the-most-bittersweet-feelings",
+    "20-shots"
   ]);
 
   renderProjects(".projects-grid.home", featured);
