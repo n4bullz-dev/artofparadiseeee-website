@@ -13,7 +13,7 @@
 /* Container */
 .player-container {
   width: 100%;
-  max-width: 900px;
+  max-width: 1150px;
   padding: 0px;
 }
 
@@ -59,6 +59,51 @@ video {
   color: white;
   font-size: 18px;
   cursor: pointer;
+}
+
+/* ================= VIDEO LOADER ================= */
+
+.video-loader {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0,0,0,0.4);
+
+  z-index: 4;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.25s ease;
+}
+
+.video-loader.active {
+  opacity: 1;
+}
+
+
+/* ================= CIRCLE SPINNER ================= */
+
+.spinner {
+  width: 48px;
+  height: 48px;
+
+  border: 4px solid rgba(255,255,255,0.2);
+  border-top-color: white;
+
+  border-radius: 50%;
+
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* ================= RANGE SLIDER (TIMELINE) ================= */
@@ -164,13 +209,6 @@ video {
   background: white;
   border-radius: 50%;
   border: none;
-}
-
-/* Title */
-#title {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 1.8rem;
 }
 
 /* ================= CENTER PLAY ================= */

@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 52vh;
+    height: 44vh;
     
     background-size: cover;
     background-position: center;
@@ -200,10 +200,10 @@
   padding: 0;               /* No padding */
   margin: 0;                /* No gap */
 
-  color: #002a66;
-  background: #fff;
-  /* border: 1px solid #002a66; */
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  background: #002a66;
+  /* border: 2px solid #fff; */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
 
   text-decoration: none;
   text-align: center;
@@ -220,14 +220,16 @@
 
 /* Active Button */
 .work-btn.active {
-  background: #002a66;
-  color: #fff;
+    background: #fff;
+    color: #002a66;
+    border: 2px solid #002a66;
 }
 
 /* Hover (Optional) */
 .work-btn:hover {
-  background: #002a66;
-  color: #fff;
+  background: #fff;
+  color: #002a66;
+  border: 2px solid #002a66;
 }
 
 /* ========= TABLET ========= */

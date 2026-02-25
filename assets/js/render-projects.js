@@ -39,21 +39,72 @@ function createProjectCard(project) {
 function getProjectDesp(project) {
   const path = window.location.pathname;
 
-  // If desp is not array (backup safety)
+
+  // Safety
   if (!Array.isArray(project.desp)) {
     return project.desp || "";
   }
 
-  // Works pages
+
+  /* ================= WORKS ================= */
+
   if (path.startsWith("/works")) {
     return project.desp[1] || project.desp[0];
   }
 
-  // Expertise pages
-  if (path.startsWith("/expertise")) {
-    return project.desp[0];
-  }
 
+  /* ================= EXPERTISE ================= */
+
+  if (path.startsWith("/expertise")) {
+
+    // Extract slug
+    let slug = path.split("/expertise/")[1] || "";
+    slug = slug.replace(/^\/|\/$/g, "");
+
+
+    /* ---------- ROLE MAP ---------- */
+
+    const roleMap = {
+      "director": "Director",
+      "cinematographer": "Cinematographer",
+      "editor": "Editor",
+      "colorist": "Colorist",
+      "vfx-artist": "VFX Artist"
+    };
+
+
+    let role =
+      roleMap[slug] ||
+      slug
+        .split("-")
+        .map(w => w[0].toUpperCase() + w.slice(1))
+        .join(" ");
+
+
+    /* ---------- SPECIAL OVERRIDES ---------- */
+
+    const overrides = {
+      "VFX Artist": {
+        "login-led": "VFX/3D Artist"
+      }
+
+      // Add more later:
+      // "Director": {
+      //   "some-id": "Creative Director"
+      // }
+    };
+
+
+    // Apply override if exists
+    if (overrides[role] && overrides[role][project.id]) {
+      return overrides[role][project.id];
+    }
+
+
+    /* ---------- DEFAULT ---------- */
+
+    return role;
+  }
   // Default fallback
   return project.desp[0];
 }
@@ -83,199 +134,148 @@ function renderProjects(selector, list) {
 function renderHomeProjects() {
   const featured = getProjectsByOrder([
     "pompkins-2",
-    "nac-long",
     "cu-fmn-2024",
-    "cucm25-teaser",
+    "nac-long",
     "sanshiba",
-    "silent-sea-empty-nets",
+    "cucm25-teaser",
     "the-most-bittersweet-feelings",
-    "20-shots"
+    
   ]);
 
   renderProjects(".projects-grid.home", featured);
 }
 
-/* ========================= ! CATEGORY =============================== */
+  /* ========================= UNIVERSAL PROJECT RENDER ========================= */
 
-function renderAwardProjects() {
-  const list = projects.filter(
-    p => p.category.includes("award")
-  );
+function parseViews(views) {
+  if (!views) return -1; // null / undefined go last
 
-  renderProjects(".projects-grid.award", list);
+  const str = views.toString().toUpperCase().trim();
+
+  if (str.endsWith("M")) {
+    return parseFloat(str) * 1_000_000;
+  }
+
+  if (str.endsWith("K")) {
+    return parseFloat(str) * 1_000;
+  }
+
+  return parseFloat(str) || 0;
 }
 
-function renderTeaserProjects() {
-  const list = projects.filter(
-    p => p.category.includes("teaser")
-  );
+function renderFilteredProjects(selector, options = {}) {
 
-  renderProjects(".projects-grid.teaser", list);
+  const { category, role } = options;
+
+  const path = window.location.pathname;
+
+
+  let list = projects.filter(p => {
+
+    let matchCategory = true;
+    let matchRole = true;
+
+    // If category is provided → must match
+    if (category) {
+      matchCategory = p.category?.includes(category);
+    }
+
+    // If role is provided → must match
+    if (role) {
+      matchRole = p.role?.includes(role);
+    }
+
+    return matchCategory && matchRole;
+
+  });
+
+
+  /* ================= SORT FOR EXPERTISE ================= */
+
+  if (path.startsWith("/expertise")) {
+
+    list.sort((a, b) => {
+
+      const viewsA = parseViews(a.views);
+      const viewsB = parseViews(b.views);
+
+      // Highest → Lowest
+      return viewsB - viewsA;
+
+    });
+
+  }
+
+
+  /* ================= RENDER ================= */
+
+  renderProjects(selector, list);
 }
 
-function renderShortFilmProjects() {
-  const list = projects.filter(
-    p => p.category.includes("shortfilm")
-  );
 
-  renderProjects(".projects-grid.shortfilm", list);
-}
-
-function renderMusicVideoProjects() {
-  const list = projects.filter(
-    p => p.category.includes("musicvideo")
-  );
-
-  renderProjects(".projects-grid.musicvideo", list);
-}
-
-function renderDocumentaryProjects() {
-  const list = projects.filter(
-    p => p.category.includes("documentary")
-  );
-
-  renderProjects(".projects-grid.documentary", list);
-}
-
-
-function renderCommercialProjects() {
-  const list = projects.filter(
-    p => p.category.includes("commercial")
-  );
-
-  renderProjects(".projects-grid.commercial", list);
-}
-
-function renderPerformanceProjects() {
-  const list = projects.filter(
-    p => p.category.includes("performance")
-  );
-
-  renderProjects(".projects-grid.performance", list);
-}
-
-function renderLEDProjects() {
-  const list = projects.filter(
-    p => p.category.includes("led")
-  );
-
-  renderProjects(".projects-grid.led", list);
-}
-
-function renderPhotographyProjects() {
-  const list = projects.filter(
-    p => p.category.includes("photography")
-  );
-
-  renderProjects(".projects-grid.photography", list);
-}
-
-/* ========================= ! EXPERTISE =============================== */
-
-function renderDirectorProjects() {
-  const list = projects.filter(
-    p => p.role.includes("director")
-  );
-
-  renderProjects(".projects-grid.director", list);
-}
-
-function renderCinematographerProjects() {
-  const list = projects.filter(
-    p => p.role.includes("cinematographer")
-  );
-
-  renderProjects(".projects-grid.cinematographer", list);
-}
-
-function renderEditorProjects() {
-  const list = projects.filter(
-    p => p.role.includes("editor")
-  );
-
-  renderProjects(".projects-grid.editor", list);
-}
-
-function renderColoristProjects() {
-  const list = projects.filter(
-    p => p.role.includes("colorist")
-  );
-
-  renderProjects(".projects-grid.colorist", list);
-}
-
-function renderVFXProjects() {
-  const list = projects.filter(
-    p => p.role.includes("vfx")
-  );
-
-  renderProjects(".projects-grid.vfx", list);
-}
-
-/* ========================= RENDER FOR EACH PAGES =============================== */
+/* ========================= AUTO PAGE DETECTION ========================= */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  if (document.querySelector(".projects-grid.home")) {
-    renderHomeProjects();
-  }
+  document.querySelectorAll(".projects-grid").forEach(grid => {
 
-/* CATEGORY RENDER */
-  if (document.querySelector(".projects-grid.award")) {
-    renderAwardProjects();
-  }
+    const classes = grid.classList;
 
-  if (document.querySelector(".projects-grid.teaser")) {
-    renderTeaserProjects();
-  }
+    // Ignore home
+    if (classes.contains("home")) {
+      renderHomeProjects();
+      return;
+    }
 
-  if (document.querySelector(".projects-grid.shortfilm")) {
-    renderShortFilmProjects();
-  }
+    let category = null;
+    let role = null;
 
-  if (document.querySelector(".projects-grid.musicvideo")) {
-    renderMusicVideoProjects();
-  }
 
-  if (document.querySelector(".projects-grid.documentary")) {
-    renderDocumentaryProjects();
-  }
+    /* CATEGORY MAP */
+    const categories = [
+      "award",
+      "teaser",
+      "shortfilm",
+      "musicvideo",
+      "documentary",
+      "commercial",
+      "performance",
+      "led",
+      "photography"
+    ];
 
-  if (document.querySelector(".projects-grid.commercial")) {
-    renderCommercialProjects();
-  }
+    /* ROLE MAP */
+    const roles = [
+      "director",
+      "cinematographer",
+      "editor",
+      "colorist",
+      "vfx"
+    ];
 
-  if (document.querySelector(".projects-grid.performance")) {
-    renderPerformanceProjects();
-  }
 
-  if (document.querySelector(".projects-grid.led")) {
-    renderLEDProjects();
-  }
+    // Detect category from class
+    categories.forEach(c => {
+      if (classes.contains(c)) {
+        category = c;
+      }
+    });
 
-  if (document.querySelector(".projects-grid.photography")) {
-    renderPhotographyProjects();
-  }
 
-/* ROLE RENDER */
-  if (document.querySelector(".projects-grid.director")) {
-    renderDirectorProjects();
-  }
+    // Detect role from class
+    roles.forEach(r => {
+      if (classes.contains(r)) {
+        role = r;
+      }
+    });
 
-  if (document.querySelector(".projects-grid.cinematographer")) {
-    renderCinematographerProjects();
-  }
 
-  if (document.querySelector(".projects-grid.editor")) {
-    renderEditorProjects();
-  }
+    // Render
+    renderFilteredProjects(
+      `.${[...classes].join(".")}`,
+      { category, role }
+    );
 
-  if (document.querySelector(".projects-grid.colorist")) {
-    renderColoristProjects();
-  }
-
-  if (document.querySelector(".projects-grid.vfx")) {
-    renderVFXProjects();
-  }
+  });
 
 });

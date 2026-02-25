@@ -472,7 +472,7 @@ header {
 
   gap: 60px;
 
-  padding: 80px 80px 64px; /* top left/right bottom */
+  padding: 30px 80px 64px; /* top left/right bottom */
 
   align-items: center;
 
@@ -1074,7 +1074,7 @@ header {
 
     gap: 40px;
 
-    padding: 60px 48px 42px;
+    padding: 20px 48px 42px;
   }
 
   .detail-1-text .detail-1-role{
@@ -1103,7 +1103,7 @@ header {
 
     gap: 20px;
 
-    padding: 60px 48px 60px;
+    padding: 20px 48px 60px;
   }
 
   .detail-1-text {
@@ -1137,7 +1137,7 @@ header {
 
     gap: 30px;
 
-    padding: 60px 0px 60px;
+    padding: 20px 0px 60px;
   }
 
   .detail-1-text {
@@ -1489,7 +1489,7 @@ footer {
 ======================================================================================================================== */
 
 .projects-section {
-  padding: 60px 20px;
+  padding: 60px 20px 10px;
 }
 
 .projects-container {
@@ -1503,12 +1503,29 @@ footer {
 
   grid-template-columns: repeat(
     auto-fill,
-    minmax(300px, 1fr)
+    minmax(250px, 1fr)
   );
 
   gap: 15px;
 
   justify-content: start;
+  padding-bottom: 40px;
+}
+
+.projects-grid.home{
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(480px, 1fr)
+  );
+
+}
+
+.projects-grid.work{
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  );
+
 }
 
 @media (max-width: 600px){
@@ -1534,6 +1551,10 @@ footer {
   overflow: hidden;
   transition: transform 0.25s ease;
   box-shadow: 2px 4px 8px rgba(0,0,0,0.5);
+}
+
+.projects-grid.home .project-card {
+  aspect-ratio: 16/10;
 }
 
 .project-card:visited,
@@ -1587,7 +1608,7 @@ footer {
 .project-title {
   grid-column: 1 / 2;
 
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #fff;
 
@@ -1600,11 +1621,15 @@ footer {
   max-width: 100%;
 }
 
+.projects-grid.home .project-title {
+  font-size: 1.4rem;
+}
+
 /* Category */
 .project-desp{
   grid-column: 1 / 2;
 
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 400;
   color: #fff;
   opacity: 0.9;
@@ -1614,6 +1639,10 @@ footer {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.projects-grid.home .project-desp{
+  font-size: 1rem;
 }
 
 /* Views */
@@ -1640,32 +1669,43 @@ footer {
 ======================================================================================================================== */
 
 .featured-text{
-  padding: 0px 30px 30px;
+  padding: 0px 30px 15px;
 }
 
 .featured-text h1 {
   color: #002a66;
+  font-size: 2rem;
+}
+
+.featured-text.home h1 {
+  color: #002a66;
   font-size: 3rem;
+  padding-bottom: 20px;
 }
 
 .container-line {
   width: 100%;
-  /* max-width: 1150px; */
+  max-width: 1435px;
 
   margin: 0 auto;
 
   border: none;
-  border-top: 2px solid #002a66;
-  padding-bottom: 50px;
+  border-top: 3px solid #002a66;
+  padding-bottom: 20px;
 }
 
 @media (max-width: 797px){
   .featured-text h1{
     text-align: center;
+    font-size: clamp(1rem, 8vw, 2rem);
+  }
+  
+  .featured-text.home h1{
+    text-align: center;
     font-size: clamp(2rem, 8vw, 3rem);
   }
 
   .featured-text {
-    padding: 0px 0px 30px;
+    padding: 0px 0px 15px;
   }
 }
