@@ -1,4 +1,14 @@
-/* player.css */
+/* ================= PLAYER HERO ================= */
+
+.player-hero {
+  width: 100%;
+  background: black;
+
+  /* Center child */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Container */
 .player-container {
@@ -105,6 +115,24 @@ video {
   text-align: center;
 }
 
+/* Volume */
+
+.volume-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 120px;
+}
+
+.volume-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+}
+
 /* ================= VOLUME ================= */
 
 #volume {
@@ -143,4 +171,75 @@ video {
   margin-top: 20px;
   text-align: center;
   font-size: 1.8rem;
+}
+
+/* ================= CENTER PLAY ================= */
+
+.center-play {
+  position: absolute;
+  inset: 0;
+
+  margin: auto;
+
+  width: 80px;
+  height: 80px;
+
+  border-radius: 50%;
+  border: none;
+
+  background: rgba(0,0,0,0.6);
+  color: white;
+
+  font-size: 32px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 10;
+
+  transition: opacity 0.3s;
+}
+
+
+/* Hide */
+.center-play.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* ================= AUTO HIDE CONTROLS ================= */
+
+.controls {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.controls.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ================= THUMBNAIL ================= */
+
+.video-thumb {
+  position: absolute;
+  inset: 0;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  z-index: 5;
+
+  transition: opacity 0.4s ease;
+
+  pointer-events: none;
+}
+
+/* Hide when playing */
+.video-thumb.hidden {
+  opacity: 0;
 }

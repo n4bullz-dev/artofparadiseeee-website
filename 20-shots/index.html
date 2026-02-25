@@ -12,7 +12,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-180.png">
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="stylesheet" href="/assets/css/player.css">
-  <link rel="stylesheet" href="/assets/css/project-style.css">
   
 </head>
 <body>
@@ -29,35 +28,48 @@
 
             <div class="video-wrapper">
 
-            <video id="video"></video>
+                <!-- Thumbnail -->
+                <div id="thumbnail" class="video-thumb"></div>
 
-            <div class="controls">
+                <!-- Center Play -->
+                <button id="centerPlay" class="center-play">▶</button>
+                <video id="video"></video>
 
-                <button id="playBtn">▶</button>
+                <div class="controls">
 
-                <input
-                type="range"
-                id="timeline"
-                min="0"
-                max="100"
-                value="0"
-                />
+                    <button id="playBtn">▶</button>
 
-                <span id="time">0:00 / 0:00</span>
-
-                <!-- Volume -->
-                <input
+                    <input
                     type="range"
-                    id="volume"
+                    id="timeline"
                     min="0"
-                    max="1"
-                    step="0.01"
-                    value="1"
-                />
+                    max="100"
+                    value="0"
+                    />
 
-                <button id="fullscreenBtn">⛶</button>
+                    <span id="time">0:00 / 0:00</span>
 
-            </div>
+                    <!-- Volume -->
+                    <div class="volume-wrap">
+
+                    <button id="muteBtn" class="volume-btn">
+                    <span id="volumeIcon"></span>
+                    </button>
+
+                    <input
+                        type="range"
+                        id="volume"
+                        min="0"
+                        max="1"
+                        step="0.01"
+                        value="1"
+                    />
+
+                    </div>
+
+                    <button id="fullscreenBtn">⛶</button>
+
+                </div>
 
             </div>
 
@@ -65,9 +77,11 @@
 
         </div>
 
-        <h1 id="title"></h1>
+        
 
     </section>
+
+    <h1 id="title"></h1>
         
 
 <!-- ================= ! FOOTER ================= -->

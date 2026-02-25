@@ -85,6 +85,7 @@ function renderHomeProjects() {
     "pompkins-2",
     "nac-long",
     "cu-fmn-2024",
+    "cucm25-teaser",
     "sanshiba",
     "silent-sea-empty-nets",
     "the-most-bittersweet-feelings",
