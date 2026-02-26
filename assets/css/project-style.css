@@ -1,4 +1,114 @@
-.project-detail-container {
-    padding: 40px 80px;
+/* ================= PLAYER HERO ================= */
 
+.project-media-hero {
+  width: 100%;
+  background: black;
+
+  /* Center child */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container */
+.project-media-container {
+  width: 100%;
+  max-width: 1150px;
+  padding: 0px;
+}
+
+.project-detail {
+    padding: 40px 80px;
+}
+
+/* ===== TITLE ===== */
+
+.project-page-title {
+  color: #002a66;
+  font-size: 2.6rem;
+  font-weight: 600;
+
+  line-height: 1.2;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+
+/* Meta Row (Category + Role) */
+
+.project-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 14px; /* space between category & role */
+  margin-top: 6px;
+}
+
+
+/* CATEGORY */
+
+.project-page-category {
+  display: inline-block;
+
+  padding: 3px 10px;
+
+  border: 2px solid #002a66;
+  border-radius: 4px;
+
+  color: #002a66;
+
+  font-size: 1.3rem;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+
+/* ROLE */
+
+.project-page-role {
+  color: #000;
+
+  font-weight: 400;
+  opacity: 0.8;
+
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 800px){
+    .project-detail{
+        padding: 30px 30px;
+    }
+}
+
+/* ================= RESPONSIVE TEXT ================= */
+
+@media (max-width: 800px) {
+
+  /* Title */
+  .project-page-title {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);     /* from 2.6rem */
+    line-height: 1.25;
+  }
+
+
+  /* Meta Row */
+  .project-meta-row {
+    gap: 10px;
+    flex-wrap: wrap;     /* allow wrap on small screens */
+  }
+
+
+  /* Category */
+  .project-page-category {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);  /* from 1.3rem */
+    padding: 2px 8px;
+  }
+
+
+  /* Role */
+  .project-page-role {
+    font-size: clamp(1rem, 2.3vw, 1.2rem);  /* from 1.2rem */
+    line-height: 1.4;
+  }
 }

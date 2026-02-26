@@ -48,7 +48,21 @@ function initPlayer() {
     `
   };
 
-  
+  // ================= Set Description =================
+
+  function setMetaDescription(text) {
+
+    let meta = document.querySelector('meta[name="description"]');
+
+    // If not exist → create
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.name = "description";
+      document.head.appendChild(meta);
+    }
+
+    meta.content = text;
+  }
 
   // ================= GET SLUG =================
 
@@ -70,10 +84,19 @@ function initPlayer() {
 
   } else {
 
-    video.src = project.videoURL;
-    thumbnail.style.backgroundImage = `url(${project.image})`;
+    // video.src = project.videoURL;
+    // thumbnail.style.backgroundImage = `url(${project.image})`;
     
-    if (title) title.textContent = project.title;
+    if (title) {
+      title.textContent = project.title;
+
+      document.title = `${project.title} - artofparadiseeee`;
+
+      setMetaDescription(
+        `${project.title} — ${project.desp?.join(" / ") || ""} by artofparadiseeee`
+      );
+    }
+
     if (category) category.textContent = project.desp[0];
     if (role) role.textContent = project.desp[1];
   }

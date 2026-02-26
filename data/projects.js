@@ -309,7 +309,8 @@ const projects = [
 
     image: "/witchmarked/witchmarked-cover.jpg",
     url: "/witchmarked",
-    views: "595"
+    views: "595",
+    embed: "https://www.youtube.com/embed/Q3O2hC6nIi0?si=sz8IncUbGjMSfeYH"
   },
 
   {
@@ -647,7 +648,9 @@ const projects = [
     image: "/20-shots/20-shots-cover.jpg",
     url: "/20-shots",
     views: "9.8K",
-    videoURL: "/20-shots/1_FUNDMEDIA_20shots.mp4"
+    embed: "https://www.youtube.com/embed/8JHneYPLGJM?si=UBkMAYnCDImUDB38",
+    link: "https://www.instagram.com/reel/C4f770xytE2/"
   }
 
 ];
+
