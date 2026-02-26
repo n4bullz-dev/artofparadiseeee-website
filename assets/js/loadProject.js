@@ -44,7 +44,7 @@ function loadProject() {
 
   /* ================= LOAD YT WRAPPER ================= */
 
-    fetch("/components/yt-wrapper.html")
+    fetch("/assets/components/yt-wrapper.html")
     .then(res => res.text())
     .then(html => {
         document.getElementById("video-container").innerHTML = html;

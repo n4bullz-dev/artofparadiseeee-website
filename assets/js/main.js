@@ -28,9 +28,9 @@ function initActiveNav() {
 
 /* Load all components */
 async function loadAll() {
-  await loadComponent("header", "/components/header.html");
-  await loadComponent("sidebar-container", "/components/sidebar.html");
-  await loadComponent("footer", "/components/footer.html");
+  await loadComponent("header", "/assets/components/header.html");
+  await loadComponent("sidebar-container", "/assets/components/sidebar.html");
+  await loadComponent("footer", "/assets/components/footer.html");
 
   initSidebar(); // ✅ Run AFTER load
   initActiveNav();
