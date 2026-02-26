@@ -648,8 +648,10 @@ const projects = [
     image: "/20-shots/20-shots-cover.jpg",
     url: "/20-shots",
     views: "9.8K",
-    embed: "https://www.youtube.com/embed/8JHneYPLGJM?si=UBkMAYnCDImUDB38",
-    link: "https://www.instagram.com/reel/C4f770xytE2/"
+    youtube: "https://www.youtube.com/watch?v=8JHneYPLGJM",
+    publish: [
+      "https://www.instagram.com/reel/C4f770xytE2/",
+    ]
   }
 
 ];

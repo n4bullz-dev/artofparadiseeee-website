@@ -18,6 +18,18 @@
 ! COVER BG (FOR EACH CATEGORY)
 ============================================================== */
 
+.hero-all{
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.6),
+            rgba(0,0,0,0.6)
+        ), url("/assets/images/hero-bg.jpg");
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 40%; /* Change this */
+}
+
 .hero-award{
     background:
         linear-gradient(

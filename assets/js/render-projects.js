@@ -192,32 +192,51 @@ function renderFilteredProjects(selector, options = {}) {
 
   /* ================= SORT FOR EXPERTISE ================= */
 
-  if (path.startsWith("/expertise")) {
+  /* Normalize path */
+  const cleanPath = path
+    .replace(/\/$/, "")
+    .replace("/index.html", "");
+
+  /* ================= SORT FOR EXPERTISE ================= */
+
+  if (cleanPath.startsWith("/expertise")) {
 
     list.sort((a, b) => {
 
       const viewsA = parseViews(a.views);
       const viewsB = parseViews(b.views);
 
-      // Highest → Lowest
-      return viewsB - viewsA;
-
+      return viewsB - viewsA; // High → Low
     });
 
   }
 
+  /* ================= SORT FOR ALL WORKS ONLY ================= */
+
+  if (cleanPath.startsWith("/works")) {
+
+    list.sort((a, b) => {
+
+      const viewsA = parseViews(a.views);
+      const viewsB = parseViews(b.views);
+
+      return viewsB - viewsA; // High → Low
+    });
+
+  }
 
   /* ================= RENDER ================= */
 
   renderProjects(selector, list);
-}
+
+  }
 
 
 /* ========================= AUTO PAGE DETECTION ========================= */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  document.querySelectorAll(".projects-grid").forEach(grid => {
+  document.querySelectorAll(".projects-grid:not(.featured-random)").forEach(grid => {
 
     const classes = grid.classList;
 

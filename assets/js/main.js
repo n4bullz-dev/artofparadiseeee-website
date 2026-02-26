@@ -11,17 +11,30 @@ function initActiveNav() {
   links.forEach(link => {
     const linkPath = new URL(link.href).pathname.replace(/\/$/, "");
 
-    // 1. Exact match (highlight current page)
+    // Clear first (safety)
+    link.classList.remove("active");
+
+    /* 1. Exact match */
     if (currentPath === linkPath) {
       link.classList.add("active");
+      return; // stop here for this link
     }
 
-    // 2. Parent section highlight (Works / Expertise main link)
+    /* 2. Parent highlight ONLY when on main page */
     if (
-      (currentPath.startsWith("/works/") && linkPath === "/works") ||
-      (currentPath.startsWith("/expertise/") && linkPath === "/expertise")
+      currentPath === "/works" &&
+      linkPath === "/works"
     ) {
       link.classList.add("active");
+      return;
+    }
+
+    if (
+      currentPath === "/expertise" &&
+      linkPath === "/expertise"
+    ) {
+      link.classList.add("active");
+      return;
     }
   });
 }
