@@ -447,7 +447,7 @@ header {
   }
 
   .hero-text p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     padding: 0px 24px;
   }
 
@@ -621,7 +621,7 @@ header {
   }
 
   .intro-text p {
-    font-size: 1rem;
+    font-size: 0.84rem;
     line-height: 1.6;
     padding: 0px 40px;
   }
@@ -1151,7 +1151,7 @@ header {
   }
 
   .detail-1-text p {
-    font-size: 1rem;
+    font-size: 0.84rem;
     line-height: 1.6;
     padding: 0px 40px;
   }
@@ -1534,6 +1534,11 @@ footer {
     grid-template-columns: 1fr;
     justify-content: center;
   }
+
+  .projects-grid.home{
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
 }
 
 /* ===========================
@@ -1663,6 +1668,16 @@ footer {
 /* Play Icon */
 .play-icon {
   font-size: 1.1rem;
+}
+
+@media (max-width: 600px){
+  .projects-grid.home .project-title{
+    font-size: clamp(0.96rem, 4vw, 1.4rem);
+  }
+
+  .projects-grid.home .project-desp{
+    font-size: clamp(0.75rem, 3vw, 1rem);
+  }
 }
 
 /* ======================================================================================================================
