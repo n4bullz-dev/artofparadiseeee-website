@@ -35,7 +35,11 @@ const projects = [
 
     image: "/login-led/login-led-cover.jpg",
     url: "/login-led",
-    views: null
+    views: null,
+    youtube: "https://youtu.be/pOfOZd3tQu0",
+    publish: [
+      "https://www.instagram.com/lakornnitadechula/"
+    ]
   },
 
   {
@@ -56,7 +60,8 @@ const projects = [
 
     image: "/sanshiba/sanshiba-cover.jpg",
     url: "/sanshiba",
-    views: null
+    views: null,
+    youtube: "https://youtu.be/BPGHFBfqMIM"
   },
 
   {
@@ -77,7 +82,8 @@ const projects = [
 
     image: "/edu-chula/edu-chula-cover.jpg",
     url: "/edu-chula",
-    views: null
+    views: null,
+    youtube: "https://youtu.be/QCJIFCN6K4E",
   },
 
   {
@@ -98,7 +104,11 @@ const projects = [
 
     image: "/cucm25-teaser/cucm25-teaser-cover.png",
     url: "/cucm25-teaser",
-    views: "28.1K"
+    views: "28.1K",
+    youtube: "https://youtu.be/DeYN4jc3OcI",
+    publish: [
+      "https://www.instagram.com/p/DSZyhhsk-gj/"
+    ]
   },
 
   {
@@ -119,7 +129,12 @@ const projects = [
 
     image: "/lakornnitadechula-68-dancever/lakornnitadechula-68-dancever-cover.png",
     url: "/lakornnitadechula-68-dancever",
-    views: "23.7K"
+    views: "23.7K",
+    youtube: "https://www.youtube.com/watch?v=it13aZXDG0I",
+    publish: [
+      "https://www.instagram.com/p/DSXSHuUk5ec/",
+      "https://www.youtube.com/watch?v=it13aZXDG0I"
+    ]
   },
 
   {
@@ -140,7 +155,12 @@ const projects = [
 
     image: "/lakornnitadechula-68-spot/lakornnitadechula-68-spot-cover.jpg",
     url: "/lakornnitadechula-68-spot",
-    views: "65.5K"
+    views: "65.5K",
+    youtube: "https://www.youtube.com/watch?v=xIUu1UldZQ4",
+    publish: [
+      "https://www.instagram.com/p/DO51z_9k_Lq/",
+      "https://www.youtube.com/watch?v=xIUu1UldZQ4"
+    ]
   },
 
   {
@@ -161,7 +181,8 @@ const projects = [
 
     image: "/the-forgotten-pilgrim/the-forgotten-pilgrim-cover.jpg",
     url: "/the-forgotten-pilgrim",
-    views: null
+    views: null,
+    youtube: "https://youtu.be/k2VjX9OBku4"
   },
 
   {
@@ -182,7 +203,11 @@ const projects = [
 
     image: "/dindan/dindan-cover.jpg",
     url: "/dindan",
-    views: "3.4K"
+    views: "3.4K",
+    youtube: "https://youtu.be/lkyl8d25An0",
+    publish: [
+      "https://www.instagram.com/p/DQG2BoRCQ2t/"
+    ]
   },
 
   {
@@ -203,7 +228,11 @@ const projects = [
 
     image: "/the-most-bittersweet-feelings/the-most-bittersweet-feelings-cover.jpg",
     url: "/the-most-bittersweet-feelings",
-    views: "6.4K"
+    views: "6.4K",
+    youtube: "https://youtu.be/iO_YKvSKjlM",
+    publish: [
+      "https://www.instagram.com/p/DObGSuECRCp/"
+    ]
   },
 
 
@@ -225,7 +254,11 @@ const projects = [
 
     image: "/cu-fmn-2025/cu-fmn-2025-cover.jpg",
     url: "/cu-fmn-2025",
-    views: "88.4K"
+    views: "88.4K",
+    youtube: "https://youtu.be/b4Hg9FsAgoM",
+    publish: [
+      "https://www.instagram.com/p/DMxZhVRJyDu/"
+    ]
   },
 
   {
@@ -246,7 +279,11 @@ const projects = [
 
     image: "/baankoom/baankoom-cover.jpg",
     url: "/baankoom",
-    views: "15.9K"
+    views: "15.9K",
+    youtube: "https://youtu.be/cFvx5QIoHdA",
+    publish: [
+      "https://www.instagram.com/p/DMurODJxnZM/"
+    ]
   },
 
   {
@@ -267,7 +304,11 @@ const projects = [
 
     image: "/silent-sea-empty-nets/silent-sea-empty-nets-cover.jpg",
     url: "/silent-sea-empty-nets",
-    views: "7.1K"
+    views: "7.1K",
+    youtube: "https://youtu.be/x8fcQHv_V5c",
+    publish: [
+      "https://vt.tiktok.com/ZSmpwrf5q/"
+    ]
   },
 
   {
@@ -288,7 +329,11 @@ const projects = [
 
     image: "/lastredopera/lastredopera-cover.jpg",
     url: "/lastredopera",
-    views: "3K"
+    views: "3K",
+    youtube: "https://youtu.be/tf7rWh1uvqo",
+    publish: [
+      "https://www.instagram.com/p/DH54NClzA3P/"
+    ]
   },
 
   {
@@ -310,7 +355,10 @@ const projects = [
     image: "/witchmarked/witchmarked-cover.jpg",
     url: "/witchmarked",
     views: "595",
-    embed: "https://www.youtube.com/embed/Q3O2hC6nIi0?si=sz8IncUbGjMSfeYH"
+    youtube: "https://www.youtube.com/watch?v=Q3O2hC6nIi0",
+    publish: [
+      "https://www.youtube.com/watch?v=Q3O2hC6nIi0"
+    ]
   },
 
   {
@@ -331,7 +379,11 @@ const projects = [
 
     image: "/daredreaming/daredreaming-cover.jpg",
     url: "/daredreaming",
-    views: "422"
+    views: "422",
+    youtube: "https://www.youtube.com/watch?v=LP7Hj49wwLk",
+    publish: [
+      "https://www.youtube.com/watch?v=LP7Hj49wwLk"
+    ]
   },
 
   {
@@ -352,7 +404,8 @@ const projects = [
 
     image: "/media-arts/media-arts-cover.jpg",
     url: "/media-arts",
-    views: null
+    views: null,
+    youtube: "https://youtu.be/MpmJcrQZu-E"
   },
 
   {
@@ -373,7 +426,11 @@ const projects = [
 
     image: "/pompkins-2/pompkins-2-cover.jpg",
     url: "/pompkins-2",
-    views: "1.5M"
+    views: "1.5M",
+    youtube: "https://youtu.be/PNOMo0bGhuA",
+    publish: [
+      "https://vt.tiktok.com/ZSmpc5SFK/"
+    ]
   },
 
   {
@@ -394,7 +451,12 @@ const projects = [
 
     image: "/pompkins-1/pompkins-1-cover.jpg",
     url: "/pompkins-1",
-    views: "681K"
+    views: "681K",
+    youtube: "https://www.youtube.com/watch?v=__cd9O-BPVM",
+    publish: [
+      "https://vt.tiktok.com/ZSmpcF9U4/",
+      "https://www.youtube.com/watch?v=__cd9O-BPVM"
+    ]
   },
 
   {
@@ -415,7 +477,11 @@ const projects = [
 
     image: "/nac-long/nac-long-cover.jpg",
     url: "/nac-long",
-    views: "35K"
+    views: "35K",
+    youtube: "https://youtu.be/AneR-Ky_ddI",
+    publish: [
+      "https://www.facebook.com/XCampusAdsIdeaContest/videos/1362958808025207/"
+    ]
   },
 
   {
@@ -436,7 +502,11 @@ const projects = [
 
     image: "/day-one/day-one-cover.jpg",
     url: "/day-one",
-    views: "11.6K"
+    views: "11.6K",
+    youtube: "https://youtu.be/rDeGVlNFAxc",
+    publish: [
+      "https://www.instagram.com/p/DE9sLPez8xj/"
+    ]
   },
 
   {
@@ -457,7 +527,11 @@ const projects = [
 
     image: "/black-thread/black-thread-cover.jpg",
     url: "/black-thread",
-    views: "1.4K"
+    views: "1.4K",
+    youtube: "https://www.youtube.com/watch?v=-zc5PmMhzsw",
+    publish: [
+      "https://www.youtube.com/watch?v=-zc5PmMhzsw"
+    ]
   },
 
   {
@@ -478,7 +552,11 @@ const projects = [
 
     image: "/incense-doc/incense-doc-cover.jpg",
     url: "/incense-doc",
-    views: "266"
+    views: "266",
+    youtube: "https://www.youtube.com/watch?v=GFiAeBrbKNU",
+    publish: [
+      "https://www.youtube.com/watch?v=GFiAeBrbKNU"
+    ]
   },
 
   {
@@ -499,7 +577,8 @@ const projects = [
 
     image: "/kaori-doc/kaori-doc-cover.jpg",
     url: "/kaori-doc",
-    views: null
+    views: null,
+    youtube: "https://youtu.be/Aaw9QlDJ4SE"
   },
 
   {
@@ -520,7 +599,11 @@ const projects = [
 
     image: "/die-with-a-smile/die-with-a-smile-cover.jpg",
     url: "/die-with-a-smile",
-    views: "5K"
+    views: "5K",
+    youtube: "https://youtu.be/RpCsKFXosAI",
+    publish: [
+      "https://www.instagram.com/p/DCrYhBDSC9j/"
+    ]
   },
 
   {
@@ -541,7 +624,11 @@ const projects = [
 
     image: "/kluai-tak/kluai-tak-cover.jpg",
     url: "/kluai-tak",
-    views: "858"
+    views: "858",
+    youtube: "https://www.youtube.com/watch?v=HuOEYmZVVl4",
+    publish: [
+      "https://www.youtube.com/watch?v=HuOEYmZVVl4"
+    ]
   },
 
   {
@@ -562,7 +649,11 @@ const projects = [
 
     image: "/cu-fmn-2024/cu-fmn-2024-cover.jpg",
     url: "/cu-fmn-2024",
-    views: "90.2K"
+    views: "90.2K",
+    youtube: "https://youtu.be/l-FZnJhgyxU",
+    publish: [
+      "https://www.instagram.com/p/C-ITsd4SykS/"
+    ]
   },
 
   {
@@ -583,12 +674,17 @@ const projects = [
 
     image: "/teamsun-67/teamsun-67-cover.jpg",
     url: "/teamsun-67",
-    views: "31.4K"
+    views: "31.4K",
+    youtube: "https://www.youtube.com/watch?v=Ef0VTezIbak",
+    publish: [
+      "https://www.instagram.com/p/C8eosFvy4df/",
+      "https://www.youtube.com/watch?v=Ef0VTezIbak"
+    ]
   },
 
   {
     /* ! Byenior 56 */
-    id: "byenior56",
+    id: "byenior-56",
     title: "BYENIOR 56",
     desp: [
       "Teaser",
@@ -604,7 +700,11 @@ const projects = [
 
     image: "/byenior-56/byenior56-cover.jpg",
     url: "/byenior-56",
-    views: "34.7K"
+    views: "34.7K",
+    youtube: "https://youtu.be/stlj5X0BG-s",
+    publish: [
+      "https://www.instagram.com/p/C6dvhjiJXF9/"
+    ]
   },
 
   {
@@ -625,7 +725,8 @@ const projects = [
 
     image: "/vaad-vela/vaad-vela-cover.jpg",
     url: "/vaad-vela",
-    views: null
+    views: null,
+    youtube: "https://youtu.be/VJ_00uZHm3g"
   },
 
   {
@@ -650,7 +751,7 @@ const projects = [
     views: "9.8K",
     youtube: "https://www.youtube.com/watch?v=8JHneYPLGJM",
     publish: [
-      "https://www.instagram.com/reel/C4f770xytE2/",
+      "https://www.instagram.com/p/C4f770xytE2/",
     ]
   }
 

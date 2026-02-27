@@ -320,13 +320,86 @@ function loadProject() {
 
     /* Toggle */
 
-    header.addEventListener("click", () => {
-      wrapper.classList.toggle("open");
-    });
+
   }
 
   /* Run */
   renderWorksGallery();
+
+  /* ================= GALLERY LIGHTBOX ================= */
+
+  function initGalleryLightbox() {
+
+    const lightbox = document.createElement("div");
+    lightbox.id = "gallery-lightbox";
+    lightbox.className = "gallery-lightbox";
+
+    lightbox.innerHTML = `
+      <span class="lightbox-close">&times;</span>
+      <img class="lightbox-image" src="" alt="">
+    `;
+
+    document.body.appendChild(lightbox);
+
+    const lightboxImg =
+      lightbox.querySelector(".lightbox-image");
+
+    const closeBtn =
+      lightbox.querySelector(".lightbox-close");
+
+
+    /* Open */
+    document.addEventListener("click", e => {
+
+      const img = e.target.closest(
+        ".works-gallery-grid img"
+      );
+
+      if (!img) return;
+
+      lightboxImg.src = img.src;
+
+      lightbox.classList.add("active");
+
+    });
+
+
+    /* Close button */
+    closeBtn.addEventListener("click", close);
+
+
+    /* Click background */
+    lightbox.addEventListener("click", e => {
+
+      if (e.target === lightbox) {
+        close();
+      }
+
+    });
+
+
+    /* ESC key */
+    document.addEventListener("keydown", e => {
+
+      if (e.key === "Escape") {
+        close();
+      }
+
+    });
+
+
+    function close() {
+
+      lightbox.classList.remove("active");
+
+      lightboxImg.src = "";
+
+    }
+  }
+
+
+  /* Init after gallery loads */
+  setTimeout(initGalleryLightbox, 300);
 
   /* ===== Random 8 Featured Works ===== */
 
@@ -387,5 +460,53 @@ function loadProject() {
 
     `).join("");
 
+  /* ================= VFX DROPDOWN ================= */
+
+  function initVFXDropdown() {
+
+    const wrappers = document.querySelectorAll(
+      ".works-gallery-wrapper"
+    );
+
+    wrappers.forEach(wrapper => {
+
+      const header = wrapper.querySelector(
+        ".works-gallery-header"
+      );
+
+      if (!header) return;
+
+    });
+  }
+
+  // Run after page loads
+  setTimeout(initVFXDropdown, 200);
+
+  /* ================= DROPDOWN SYSTEM ================= */
+
+  function initAllDropdowns() {
+
+    const wrappers = document.querySelectorAll(
+      ".works-gallery-wrapper"
+    );
+
+    wrappers.forEach(wrapper => {
+
+      const header = wrapper.querySelector(
+        ".works-gallery-header"
+      );
+
+      if (!header) return;
+
+      header.onclick = () => {
+        wrapper.classList.toggle("open");
+      };
+
+    });
+
+  }
+
+  // Run after everything loads
+  window.addEventListener("load", initAllDropdowns);
 
 }

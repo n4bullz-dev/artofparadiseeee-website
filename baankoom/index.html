@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title></title>
+  <meta name="description" content="">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-180.png">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/project-style.css">
+
+</head>
+<body>
+
+<!-- ================= ! HEADER ! SIDEBAR ================= -->
+  <div id="header"></div>
+  <div id="sidebar-container"></div>
+
+<!-- ================= ! VIDEO PLAYER ================= -->
+     
+  <section class="project-media-hero">
+
+    <div class="project-media-container">
+
+      <div id="video-container"></div>
+
+    </div>
+
+  </section>
+    
+<!-- ================= ! DETAIL ================= -->
+    
+  <section class="project-detail">
+
+    <div class="container">
+
+      <h1 class="project-page-title" id="title"></h1>
+      <div class="project-meta-row">
+        <span class="project-page-category" id="category"></span>
+        <span class="project-page-role" id="role"></span>
+      </div>
+      <div id="project-views-container"></div>
+
+      <!-- View on Platform -->
+      <div id="publish-platform"></div>
+
+    </div>
+            
+  </section>
+
+  <div class="container">
+
+    <div class="works-gallery-wrapper">
+
+        <div class="works-gallery-header">
+            <span>▶</span>
+            <div>VFX Breakdown</div>
+        </div>
+
+        <div class="works-gallery-content">
+            <div class="shorts-video">
+
+            <iframe
+                width="360"
+                height="640"
+                src="https://www.youtube.com/embed/SXjJzUJrlM8"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+            ></iframe>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <div class="shorts-container">
+        <p>VFX BREAKDOWN</p>
+
+    
+    </div> -->
+
+      <!-- Works Gallery -->
+      <div id="works-gallery-container"></div>
+
+  </div>
+
+<section class="projects-section">
+
+  <div class="projects-container">
+
+    <div class="featured-text">
+      <h1>Featured Work</h1>
+    </div>
+    <div class="projects-grid work featured-random">
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Gallery Lightbox -->
+<div id="gallery-lightbox" class="gallery-lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-image" src="" alt="">
+</div>
+    
+<!-- ================= ! FOOTER ================= -->
+  <div id="footer"></div>
+
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/data/projects.js"></script>
+  <script src="/assets/js/loadProject.js"></script>
+  <script src="/assets/js/render-projects.js"></script>
+
+</body>
+</html>

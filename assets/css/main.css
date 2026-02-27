@@ -472,7 +472,7 @@ header {
 
   gap: 60px;
 
-  padding: 30px 80px 64px; /* top left/right bottom */
+  padding: 64px 80px 64px; /* top left/right bottom */
 
   align-items: center;
 
@@ -533,7 +533,7 @@ header {
 
     gap: 40px;
 
-    padding: 0px 48px 42px;
+    padding: 82px 48px 42px;
   }
 
   .intro-text .intro-role{
@@ -562,7 +562,7 @@ header {
 
     gap: 40px;
 
-    padding: 0px 18px 28px;
+    padding: 68px 18px 28px;
   }
 
   .intro-text {
@@ -601,7 +601,7 @@ header {
 
     gap: 36px;
 
-    padding: 20px 0px 20px;
+    padding: 60px 0px 20px;
   }
 
   .intro-text {
@@ -690,7 +690,7 @@ header {
 
   max-width: 600px;
   margin: 0 auto;
-  padding: 0px 20px 80px;
+  padding: 0px 20px 20px;
 }
 
 .icon-grid img {
@@ -844,6 +844,7 @@ header {
 .works-title {
   color:#002a66;
   font-size: 3.5rem;
+  margin-top: 60px;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -1008,7 +1009,7 @@ header {
 
   gap: 40px;
 
-  padding: 80px 80px 80px; /* top left/right bottom */
+  padding: 80px 80px 0px; /* top left/right bottom */
 
   align-items: center;
 
@@ -1074,7 +1075,7 @@ header {
 
     gap: 40px;
 
-    padding: 80px 48px 42px;
+    padding: 80px 48px 0px;
   }
 
   .detail-1-text .detail-1-role{
@@ -1103,7 +1104,7 @@ header {
 
     gap: 20px;
 
-    padding: 60px 48px 60px;
+    padding: 60px 48px 0px;
   }
 
   .detail-1-text {
@@ -1137,7 +1138,7 @@ header {
 
     gap: 30px;
 
-    padding: 60px 0px 60px;
+    padding: 60px 0px 0px;
   }
 
   .detail-1-text {
@@ -1173,7 +1174,7 @@ header {
 
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0px 60px 60px;
+  padding: 0px 60px 30px;
 
   gap: 6px;
   
@@ -1225,7 +1226,7 @@ header {
 
 @media (max-width: 1024px){
   .expertise-grid {
-  padding: 0px 30px 60px;
+  padding: 0px 30px 30px;
   
   }
 }
@@ -1489,7 +1490,7 @@ footer {
 ======================================================================================================================== */
 
 .projects-section {
-  padding: 60px 20px 10px;
+  padding: 40px 20px 30px;
 }
 
 .projects-container {
