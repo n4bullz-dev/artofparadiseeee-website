@@ -320,7 +320,7 @@ function loadProject() {
 
     /* Toggle */
 
-
+    initAllDropdowns(); 
   }
 
   /* Run */
@@ -492,6 +492,9 @@ function loadProject() {
 
     wrappers.forEach(wrapper => {
 
+      if (wrapper.dataset.ready) return; // prevent duplicate
+      wrapper.dataset.ready = "true";
+
       const header = wrapper.querySelector(
         ".works-gallery-header"
       );
@@ -505,8 +508,4 @@ function loadProject() {
     });
 
   }
-
-  // Run after everything loads
-  window.addEventListener("load", initAllDropdowns);
-
 }
