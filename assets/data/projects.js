@@ -45,7 +45,7 @@ const projects = [
   {
     /* ! SANSHIBA */
     id: "sanshiba",
-    title: "SANSHIBA",
+    title: "เพียงไม่นาน 不久之后 - SANSHIBA",
     desp: [
       "Music Video",
       "Cinematographer, Editor, Colorist & VFX Artist"
@@ -61,7 +61,10 @@ const projects = [
     image: "/sanshiba/sanshiba-cover.jpg",
     url: "/sanshiba",
     views: null,
-    youtube: "https://youtu.be/BPGHFBfqMIM"
+    youtube: "https://www.youtube.com/watch?v=FHoZiEP6D7Y",
+    publish: [
+      "https://www.youtube.com/watch?v=FHoZiEP6D7Y"
+    ]
   },
 
   {
@@ -188,7 +191,7 @@ const projects = [
   {
     /* ! DINDAN */
     id: "dindan",
-    title: "DINDAN",
+    title: "ดินแดน - SAFEPLANET",
     desp: [
       "Music Video",
       "Director, Cinematographer, Editor, Colorist & VFX Artist"
@@ -512,7 +515,7 @@ const projects = [
   {
     /* ! BLACK THREAD */
     id: "black-thread",
-    title: "BLACK THREAD, UNFORTUNATE WORK", 
+    title: "ด้ายดำเป็นเหตุ UNFORTUNATE WORK", 
     desp: [
       "Short Film",
       "Editor"
@@ -537,7 +540,7 @@ const projects = [
   {
     /* ! DOC 2 (INCENSE) */
     id: "incense-doc",
-    title: "INCENSE SMOKE - FAITH OR DANGER?", 
+    title: "ควันธูป - ศรัทธา หรือ เสี่ยงภัย?", 
     desp: [
       "Documentary",
       "Director, Cinematographer, Editor & Colorist"
@@ -609,7 +612,7 @@ const projects = [
   {
     /* ! KLUAI TAK */
     id: "kluai-tak",
-    title: "KLUAI TAK",
+    title: "กล้วยตาก",
     desp: [
       "Short Film",
       "Cinematographer"
@@ -659,7 +662,7 @@ const projects = [
   {
     /* ! TeamSun 67 */
     id: "teamsun-67",
-    title: "TEAMSUN 67",
+    title: "เปิดตัวทีมสันนิเทศจุฬาฯ 67",
     desp: [
       "Teaser",
       "Director, Cinematographer, Editor, Colorist & VFX Artist"
@@ -710,7 +713,7 @@ const projects = [
   {
     /* ! Vaad Vela */
     id: "vaad-vela",
-    title: "DRAWN IN TIME",
+    title: "วาดเวลา",
     desp: [
       "Short Film",
       "Director, Cinematographer, Editor, Colorist & VFX Artist"

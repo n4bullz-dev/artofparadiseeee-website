@@ -134,11 +134,11 @@ function renderProjects(selector, list) {
 function renderHomeProjects() {
   const featured = getProjectsByOrder([
     "pompkins-2",
-    "cu-fmn-2024",
+    "pompkins-1",
     "nac-long",
+    "login-led",
     "sanshiba",
     "cucm25-teaser",
-    "the-most-bittersweet-feelings",
     
   ]);
 
