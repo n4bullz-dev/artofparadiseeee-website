@@ -17,6 +17,10 @@
   padding: 0px;
 }
 
+.project-media-container--home {
+  padding: 40px 20px;
+}
+
 .project-detail {
   background: #002a66;
     padding: 40px 80px;
