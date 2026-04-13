@@ -18,6 +18,32 @@ const projects = [
 //   },
 
   {
+      /* ! DR.J */
+      id: "dr-j-ad",
+      title: "DR.J AD",
+      desp: [
+        "Commercial",
+        "Editor & Colorist"
+      ],
+      category: [
+          "commercial"
+      ],
+
+      role: [
+          "editor", "colorist"
+      ],
+
+      image: "/dr-j-ad/dr-j-ad-cover.jpg",
+      url: "/dr-j-ad",
+      views: "111K",
+      youtube: "https://youtu.be/CBGCtWB3c4g",
+      publish: [
+        "https://www.instagram.com/p/DWpxk7tDDM3/",
+        "https://www.instagram.com/p/DWql3X4ibFN/"
+      ]
+    },
+
+  {
     /* ! LOGIN LED */
     id: "login-led",
     title: "LOGIN - GOLIATH BOSS FIGHT",
