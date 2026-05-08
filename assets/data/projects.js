@@ -46,7 +46,7 @@ const projects = [
   {
       /* ! PAUSE */
       id: "pause",
-      title: "PAUSE",
+      title: "PAUSE - จุดเว้นวรรค",
       desp: [
         "Short Film",
         "Cinematographer & Colorist"
