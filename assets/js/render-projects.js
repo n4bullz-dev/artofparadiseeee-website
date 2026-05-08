@@ -85,7 +85,8 @@ function getProjectDesp(project) {
 
     const overrides = {
       "VFX Artist": {
-        "login-led": "VFX/3D Artist"
+        "login-led": "VFX/3D Artist",
+        "ascendant": "VFX/3D Artist"
       }
 
       // Add more later:
@@ -134,9 +135,9 @@ function renderProjects(selector, list) {
 function renderHomeProjects() {
   const featured = getProjectsByOrder([
     "pompkins-2",
-    "pompkins-1",
+    "pause",
     "nac-long",
-    "login-led",
+    "ascendant",
     "sanshiba",
     "cucm25-teaser",
     
@@ -259,7 +260,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "documentary",
       "commercial",
       "performance",
-      "led",
+      "animation",
       "photography"
     ];
 

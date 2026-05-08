@@ -17,6 +17,57 @@ const projects = [
 //     views: ""
 //   },
 
+{
+      /* ! ASCENDANT */
+      id: "ascendant",
+      title: "ASCENDANT",
+      desp: [
+        "Animation",
+        "Director, VFX/3D Artist"
+      ],
+      category: [
+          "animation"
+      ],
+
+      role: [
+          "director", "cinematographer", "editor", "colorist", "vfx"
+      ],
+
+      image: "/ascendant/ascendant-cover.jpg",
+      url: "/ascendant",
+      views: "3K",
+      youtube: "https://youtu.be/vvRM4NEnlP4",
+      publish: [
+        "https://www.instagram.com/p/DXvQCqQT5t8/",
+        "https://youtu.be/vvRM4NEnlP4"
+      ]
+    },
+
+  {
+      /* ! PAUSE */
+      id: "pause",
+      title: "PAUSE",
+      desp: [
+        "Short Film",
+        "Cinematographer & Colorist"
+      ],
+      category: [
+          "shortfilm"
+      ],
+
+      role: [
+          "cinematographer", "colorist"
+      ],
+
+      image: "/pause/pause-cover.jpg",
+      url: "/pause",
+      views: null,
+      youtube: "https://youtu.be/eim8vkWZtNY",
+      publish: [
+        "https://www.instagram.com/p/DXmar5kiQ3Q/"
+      ]
+    },
+
   {
       /* ! DR.J */
       id: "dr-j-ad",
@@ -48,11 +99,11 @@ const projects = [
     id: "login-led",
     title: "LOGIN - GOLIATH BOSS FIGHT",
     desp: [
-      "Visual LED",
+      "Animation",
       "VFX/3D Artist"
     ],
     category: [
-        "led"
+        "animation"
     ],
 
     role: [

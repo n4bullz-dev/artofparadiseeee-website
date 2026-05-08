@@ -850,7 +850,7 @@ header {
 .works-title {
   color:#002a66;
   font-size: 3.5rem;
-  margin-top: 60px;
+  margin-top: 10px;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -1015,7 +1015,7 @@ header {
 
   gap: 40px;
 
-  padding: 80px 80px 0px; /* top left/right bottom */
+  padding: 30px 80px 80px; /* top left/right bottom */
 
   align-items: center;
 
@@ -1081,7 +1081,7 @@ header {
 
     gap: 40px;
 
-    padding: 80px 48px 0px;
+    padding: 30px 48px 80px;
   }
 
   .detail-1-text .detail-1-role{
@@ -1110,7 +1110,7 @@ header {
 
     gap: 20px;
 
-    padding: 60px 48px 0px;
+    padding: 20px 48px 60px;
   }
 
   .detail-1-text {
@@ -1144,7 +1144,7 @@ header {
 
     gap: 30px;
 
-    padding: 60px 0px 0px;
+    padding: 20px 0px 60px;
   }
 
   .detail-1-text {
@@ -1180,8 +1180,7 @@ header {
 
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0px 60px 30px;
-
+  padding: 0px 60px 80px;
   gap: 6px;
   
 }
@@ -1309,7 +1308,7 @@ footer {
   background: #002a66;
   color: #ffffff;
   padding: 40px 80px;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  /* border-top: 1px solid rgba(255,255,255,0.1); */
 }
 
 .footer-content {
